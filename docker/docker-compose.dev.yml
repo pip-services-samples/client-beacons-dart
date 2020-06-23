@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+
+  app:
+    image: data-microservice:1.0-0-rc
+    ports:
+      - "8080:8080"  
+    environment:
+      - HTTP_ENABLED=true
+      - HTTP_PORT=8080
