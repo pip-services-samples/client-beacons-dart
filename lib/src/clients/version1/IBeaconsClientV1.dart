@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:pip_services3_commons/pip_services3_commons.dart';
 
-import '../../../src/data/version1/BeaconV1.dart';
+import 'package:pip_data_microservice_dart/pip_data_microservice_dart.dart';
 
 abstract class IBeaconsClientV1 {
   Future<DataPage<BeaconV1>> getBeacons(

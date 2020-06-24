@@ -1,7 +1,8 @@
 import 'package:test/test.dart';
 import 'package:pip_services3_commons/pip_services3_commons.dart';
-
+import 'package:pip_data_microservice_dart/pip_data_microservice_dart.dart';
 import 'package:pip_client_microservice_dart/pip_client_microservice_dart.dart';
+
 
 final BEACON1 = BeaconV1(
     id: '1',
@@ -83,7 +84,6 @@ class BeaconsClientV1Fixture {
     beacon = await _client.getBeaconById('123', beacon1.id);
     expect(beacon, isNull);
 
-    await _client.deleteBeaconById('123', BEACON2.id);
   }
 
   void testCalculatePosition() async {

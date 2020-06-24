@@ -17,6 +17,9 @@ dependencies:
   http: "^0.12.0"
   angel_framework: ^2.1.1
   fixnum: ^0.10.11
+  pip_data_microservice_dart:
+    git:
+      url: https://github.com/pip-services-samples/pip-data-microservice-dart
 
 dev_dependencies:
   test: '>=1.14.2 <2.0.0'

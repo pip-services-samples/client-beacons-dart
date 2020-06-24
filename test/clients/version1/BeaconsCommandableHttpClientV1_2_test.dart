@@ -16,7 +16,7 @@ var httpConfig = ConfigParams.fromTuples([
 ]);
 
 void main() {
-  group('BeaconsCommandableHttpClientV1', () {
+  group('BeaconsCommandableHttpClientV1_2', () {
     BeaconsCommandableHttpClientV1 client;
     BeaconsClientV1Fixture fixture;
 
@@ -30,6 +30,21 @@ void main() {
       fixture = BeaconsClientV1Fixture(client);
 
       await client.open(null);
+
+      // clean persistence
+
+      for(;;){
+        var page = await client.getBeacons('123', FilterParams(), PagingParams());
+        if (page == null || page.data.isEmpty) {
+          break;
+        }
+
+        for (var beacon in page.data){
+          await client.deleteBeaconById('123', beacon.id);
+        }
+        
+      }
+
     });
 
     tearDown(() async {

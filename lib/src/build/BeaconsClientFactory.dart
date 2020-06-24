@@ -2,7 +2,7 @@ import 'package:pip_services3_components/pip_services3_components.dart';
 import 'package:pip_services3_commons/pip_services3_commons.dart';
 
 import '../clients/version1/BeaconsNullClientV1.dart';
-//import '../clients/version1/BeaconsDirectClientV1.dart';
+import '../clients/version1/BeaconsDirectClientV1.dart';
 import '../clients/version1/BeaconsCommandableHttpClientV1.dart';
 
 
@@ -17,8 +17,8 @@ class BeaconsClientFactory extends Factory {
   BeaconsClientFactory() : super() {
     registerAsType(
         BeaconsClientFactory.NullClientDescriptor, BeaconsNullClientV1);
-    // registerAsType(
-    //     BeaconsClientFactory.DirectClientDescriptor, BeaconsDirectClientV1);
+    registerAsType(
+        BeaconsClientFactory.DirectClientDescriptor, BeaconsDirectClientV1);
     registerAsType(BeaconsClientFactory.CommandableHttpClientDescriptor,
         BeaconsCommandableHttpClientV1);
   

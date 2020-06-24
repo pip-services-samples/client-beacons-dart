@@ -2,7 +2,8 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:pip_services3_commons/pip_services3_commons.dart';
 import 'package:pip_services3_rpc/pip_services3_rpc.dart';
-import '../../data/version1/BeaconV1.dart';
+import 'package:pip_data_microservice_dart/pip_data_microservice_dart.dart';
+
 import './IBeaconsClientV1.dart';
 
 class BeaconsCommandableHttpClientV1 extends CommandableHttpClient
