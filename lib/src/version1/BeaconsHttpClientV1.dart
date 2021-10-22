@@ -6,9 +6,9 @@ import 'package:pip_services_beacons_dart/pip_services_beacons_dart.dart';
 
 import './IBeaconsClientV1.dart';
 
-class BeaconsCommandableHttpClientV1 extends CommandableHttpClient
+class BeaconsHttpClientV1 extends CommandableHttpClient
     implements IBeaconsClientV1 {
-  BeaconsCommandableHttpClientV1([config]) : super('v1/beacons') {
+  BeaconsHttpClientV1([config]) : super('v1/beacons') {
     if (config != null) {
       configure(ConfigParams.fromValue(config));
     }

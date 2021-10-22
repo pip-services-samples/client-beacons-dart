@@ -17,11 +17,11 @@ var httpConfig = ConfigParams.fromTuples([
 ]);
 
 void main() {
-  group('BeaconsCommandableHttpClientV1', () {
+  group('BeaconsHttpClientV1', () {
     late BeaconsMemoryPersistence persistence;
     late BeaconsController controller;
-    late BeaconsCommandableHttpServiceV1 service;
-    late BeaconsCommandableHttpClientV1 client;
+    late BeaconsHttpServiceV1 service;
+    late BeaconsHttpClientV1 client;
     late BeaconsClientV1Fixture fixture;
 
     setUp(() async {
@@ -31,10 +31,10 @@ void main() {
       controller = BeaconsController();
       controller.configure(ConfigParams());
 
-      service = BeaconsCommandableHttpServiceV1();
+      service = BeaconsHttpServiceV1();
       service.configure(httpConfig);
 
-      client = BeaconsCommandableHttpClientV1();
+      client = BeaconsHttpClientV1();
       client.configure(httpConfig);
       var references = References.fromTuples([
         Descriptor('beacons', 'persistence', 'memory', 'default', '1.0'),
