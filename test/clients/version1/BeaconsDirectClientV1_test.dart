@@ -7,10 +7,10 @@ import './BeaconsClientV1Fixture.dart';
 
 void main() {
   group('BeaconsDirectClientV1', () {
-    BeaconsMemoryPersistence persistence;
-    BeaconsController controller;
-    BeaconsDirectClientV1 client;
-    BeaconsClientV1Fixture fixture;
+    late BeaconsMemoryPersistence persistence;
+    late BeaconsController controller;
+    late BeaconsDirectClientV1 client;
+    late BeaconsClientV1Fixture fixture;
 
     setUp(() async {
       persistence = BeaconsMemoryPersistence();

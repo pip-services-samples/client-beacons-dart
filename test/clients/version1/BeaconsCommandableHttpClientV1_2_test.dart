@@ -12,13 +12,13 @@ var httpConfig = ConfigParams.fromTuples([
   'connection.host',
   'localhost',
   'connection.port',
-  8080
+  3002
 ]);
 
 void main() {
   group('BeaconsCommandableHttpClientV1_2', () {
-    BeaconsCommandableHttpClientV1 client;
-    BeaconsClientV1Fixture fixture;
+    late BeaconsCommandableHttpClientV1 client;
+    late BeaconsClientV1Fixture fixture;
 
     setUp(() async {
       client = BeaconsCommandableHttpClientV1();
@@ -33,18 +33,17 @@ void main() {
 
       // clean persistence
 
-      for(;;){
-        var page = await client.getBeacons('123', FilterParams(), PagingParams());
+      for (;;) {
+        var page =
+            await client.getBeacons('123', FilterParams(), PagingParams());
         if (page == null || page.data.isEmpty) {
           break;
         }
 
-        for (var beacon in page.data){
-          await client.deleteBeaconById('123', beacon.id);
+        for (var beacon in page.data) {
+          await client.deleteBeaconById('123', beacon.id!);
         }
-        
       }
-
     });
 
     tearDown(() async {
