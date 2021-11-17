@@ -9,11 +9,11 @@ environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  pip_services3_commons: ^1.1.4
-  pip_services3_components: ^1.1.2
-  pip_services3_data: ^1.1.1
-  pip_services3_mongodb: ^1.1.0
-  pip_services3_rpc: ^1.1.2
+  pip_services3_commons: ^1.1.5
+  pip_services3_components: ^1.2.0
+  pip_services3_data: ^1.1.2
+  pip_services3_mongodb: ^1.1.1
+  pip_services3_rpc: ^1.2.0
   pip_services3_container: ^1.1.1
   http: ^0.13.3
   fixnum: ^1.0.0
