@@ -5,15 +5,15 @@ import '../pip_clients_beacons_dart.dart';
 
 class BeaconsClientFactory extends Factory {
   static var NullClientV1Descriptor =
-      Descriptor('pip-services-beacons', 'client', 'null', '*', '1.0');
+      Descriptor('beacons', 'client', 'null', '*', '1.0');
   static var MockClientV1Descriptor =
-      Descriptor('pip-services-beacons', 'client', 'mock', '*', '1.0');
+      Descriptor('beacons', 'client', 'mock', '*', '1.0');
   static var DirectClientV1Descriptor =
-      Descriptor('pip-services-beacons', 'client', 'direct', '*', '1.0');
+      Descriptor('beacons', 'client', 'direct', '*', '1.0');
   static var HttpClientV1Descriptor =
-      Descriptor('pip-services-beacons', 'client', 'http', '*', '1.0');
+      Descriptor('beacons', 'client', 'http', '*', '1.0');
   static var LambdaClientV1Descriptor =
-      Descriptor('pip-services-beacons', 'client', 'lambda', '*', '1.0');
+      Descriptor('beacons', 'client', 'lambda', '*', '1.0');
 
   BeaconsClientFactory() : super() {
     registerAsType(
